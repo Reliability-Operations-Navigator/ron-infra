@@ -5,9 +5,9 @@ variable "platform_namespace" {
   default = "platform"
 }
 variable "github_config_url" { type = string }
-variable "github_pat" { 
-  type      = string 
-  sensitive = true 
+variable "github_pat" {
+  type      = string
+  sensitive = true
 }
 variable "monitoring_namespace" {
   type    = string

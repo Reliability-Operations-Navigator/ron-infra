@@ -27,7 +27,7 @@ module "arc" {
   depends_on        = [module.networking]
 }
 module "monitoring" {
-  source                  = "./modules/monitoring"
-  monitoring_namespace     = var.monitoring_namespace
-  grafana_admin_password   = var.grafana_admin_password
+  source                 = "./modules/monitoring"
+  monitoring_namespace   = var.monitoring_namespace
+  grafana_admin_password = var.grafana_admin_password
 }
