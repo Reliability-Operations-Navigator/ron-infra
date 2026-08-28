@@ -18,4 +18,8 @@ resource "helm_release" "cilium" {
     value = "6443"
   
   }
+  set {
+    name = "operator.replicas"
+    value = "1"
+  }
 }
