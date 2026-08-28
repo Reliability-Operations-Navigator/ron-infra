@@ -9,3 +9,12 @@ variable "github_pat" {
   type      = string 
   sensitive = true 
 }
+variable "monitoring_namespace" {
+  type    = string
+  default = "monitoring"
+}
+variable "grafana_admin_password" {
+  type      = string
+  sensitive = true
+}
+
