@@ -17,4 +17,23 @@ variable "grafana_admin_password" {
   type      = string
   sensitive = true
 }
+variable "argocd_values_path" {
+  type = string
+  validation {
+    condition     = fileexists(var.argocd_values_path)
+    error_message = "argocd_values_path does not point to a real file: ${var.argocd_values_path}"
+  }
+
+}
+variable "traefik_values_path" {
+  type = string
+  validation {
+    condition     = fileexists(var.traefik_values_path)
+    error_message = "traefik_values_path does not point to a real file: ${var.traefik_values_path}"
+  }
+}
+variable "cloudflare_tunnel_token" {
+  type      = string
+  sensitive = true
+}
 

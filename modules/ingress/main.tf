@@ -4,4 +4,5 @@ resource "helm_release" "traefik" {
   chart      = "traefik"
   namespace  = "kube-system"
   version    = var.traefik_version
+  values     = [file(var.traefik_values_path)]
 }
